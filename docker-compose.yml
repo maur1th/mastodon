@@ -8,13 +8,13 @@ services:
 
   db:
     restart: always
-    image: postgres:alpine
+    image: postgres:9.6-alpine
     volumes:
       - mastodon-db:/var/lib/postgresql/data:Z
 
   redis:
     restart: always
-    image: redis:alpine
+    image: redis:3.2-alpine
     volumes:
       - mastodon-redis:/data:Z
 
